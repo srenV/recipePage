@@ -1,63 +1,158 @@
-body{
-    background-color: hsl(30, 54%, 90%);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Outfit';
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 54%, 90%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Outfit', monospace;
+  font-size: 16px;
+  padding: 20px;
+  margin: 0;
+  color: hsl(30, 10%, 34%);
+  min-height: 100vh;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    align-items: center;
-    width: 650px;
-    height: 200vh;
-    border-radius: 30px;
-    margin: 120px;
-    padding: 36px;
-    
-
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  width: 100%;
+  max-width: 730px;
+  flex-grow: 1;
+  border-radius: 20px;
+  margin: 0;
+  padding: 40px;
 }
 
 #topImage {
-    background-image: url("./assets/images/image-omelette.jpeg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 300px;
-    width: 100%;
-    border-radius: 10px;
+  background-image: url("./assets/images/image-omelette.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-h1{
-    font-size: 35px;
-    font-family: 'Young Serif';
-    align-self: start;
+h1 {
+  font-size: 34px;
+  font-family: 'Young Serif', Georgia, serif;
+  align-self: start;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: hsl(24, 5%, 18%);
 }
 
 h2 {
-    color: hsl(14, 45%, 36%);
-    font-family: 'Young Serif';
+  color: hsl(14, 45%, 36%);
+  font-family: 'Young Serif', Georgia, serif;
+  font-weight: 400;
+  margin: 0 0 12px 0;
 }
 
 h3 {
-    color: hsl(332, 51%, 32%);
-    font-family: 'Young Serif';
+  color: hsl(332, 51%, 32%);
+  font-family: 'Outfit', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+li {
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+::marker {
+  color: hsl(332, 51%, 32%);
+  font-family: 'Outfit', system-ui;
+  font-weight: 700;
+}
+
+#prepTime {
+  align-self: start;
+  background-color: hsl(330, 100%, 98%);
+  width: 100%;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+#prepTime span {
+  font-weight: bolder;
+  line-height: 1.8;
+  color: hsl(24, 5%, 18%);
+}
+
+#prepTime li {
+  line-height: 1.6;
+}
+
+#ingredients {
+  align-self: start;
+  line-height: 1.8;
+}
+
+#instructions {
+  border-top: 1px solid hsl(30, 18%, 87%);
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+  line-height: 1.6;
+  width: 100%;
+  padding: 18px 0;
+}
+
+#instructions li {
+  padding: 10px 0;
+}
+
+#instructions span {
+  font-weight: bolder;
+  color: hsl(24, 5%, 18%);
+}
+
+#prepTime, #ingredients, #instructions, #nutrition {
+  margin-top: 20px;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+  padding: 8px 0;
+}
+
+.macroV {
+  color: hsl(332, 51%, 32%);
+  font-family: 'Outfit', system-ui;
+  font-weight: 700;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+@media (min-width: 700px) {
+  body {
+    padding: 60px;
+  }
 }
